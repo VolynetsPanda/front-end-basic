@@ -1,0 +1,13 @@
+$base-color: #c6538c;
+$black-color: #000;
+$default-size: 100px;
+$lx-screen: 1200px;
+$ls-screen: 600px;
+$fonts: 'Pacifico', cursive;
+$m-10: 10px;
+@mixin button-base($num, $align) {
+    font-family: $fonts;
+    font-weight: bold;
+    font-size: $num;
+    text-align: $align;
+}

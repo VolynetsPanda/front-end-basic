@@ -1,0 +1,43 @@
+*, html, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    background: $base-color;
+}
+.wrap{
+    width: 50%;
+    background: red;
+    &-box{
+        width: $default-size;
+        height: $default-size;
+        background: $black-color;
+        &-inner{
+            background: orange;
+        }
+        &:hover{
+            background: green;
+            .wrap-box-inner{
+                background: yellow;
+            }
+        }
+    }
+    @media screen and (max-width: $lx-screen){
+        background-color: green;
+    }
+    @media screen and (max-width: $ls-screen){
+        width: 100%;
+        background-color: orange;
+    }
+}
+p{
+    @include button-base(24px, right);
+}
+h1{
+    font-family: $fonts;
+    text-align: center;
+}
