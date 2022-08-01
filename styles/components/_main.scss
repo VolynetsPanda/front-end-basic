@@ -5,39 +5,43 @@
     list-style: none;
     text-decoration: none;
 }
-
-body{
-    background: $base-color;
+.wrap-flex{
+    display: flex;
+    justify-content: flex-end;
 }
-.wrap{
-    width: 50%;
-    background: red;
-    &-box{
-        width: $default-size;
-        height: $default-size;
-        background: $black-color;
-        &-inner{
-            background: orange;
+.card-body{
+    .card-title{
+        @include button-base(48px, center)
+    }
+    .btn{
+        background-color: pink;
+        box-shadow: 2px 2px 5px red;
+        border: 0;
+        color: #fff;
+    }
+}
+.nav-tabs{
+    ul{
+        margin: 0;
+    }
+    .nav-link{
+        color: orange;
+        &.active {
+            color: red;
         }
-        &:hover{
-            background: green;
-            .wrap-box-inner{
-                background: yellow;
-            }
+        &:disabled {
+            color: blue;
         }
     }
-    @media screen and (max-width: $lx-screen){
-        background-color: green;
-    }
-    @media screen and (max-width: $ls-screen){
-        width: 100%;
-        background-color: orange;
+}
+.flex{
+    display: flex;
+    &__s-b{
+        display: flex;
+        justify-content: space-between;
     }
 }
-p{
-    @include button-base(24px, right);
-}
-h1{
-    font-family: $fonts;
-    text-align: center;
+.row > div{
+    background: pink;
+    border: 1px solid #000;
 }

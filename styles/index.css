@@ -7,48 +7,46 @@
   text-decoration: none;
 }
 
-body {
-  background: #c6538c;
+.wrap-flex {
+  display: flex;
+  justify-content: flex-end;
 }
 
-.wrap {
-  width: 50%;
-  background: red;
-}
-.wrap-box {
-  width: 100px;
-  height: 100px;
-  background: #000;
-}
-.wrap-box-inner {
-  background: orange;
-}
-.wrap-box:hover {
-  background: green;
-}
-.wrap-box:hover .wrap-box-inner {
-  background: yellow;
-}
-@media screen and (max-width: 1200px) {
-  .wrap {
-    background-color: green;
-  }
-}
-@media screen and (max-width: 600px) {
-  .wrap {
-    width: 100%;
-    background-color: orange;
-  }
-}
-
-p {
+.card-body .card-title {
   font-family: "Pacifico", cursive;
   font-weight: bold;
-  font-size: 24px;
-  text-align: right;
+  font-size: 48px;
+  text-align: center;
+}
+.card-body .btn {
+  background-color: pink;
+  box-shadow: 2px 2px 5px red;
+  border: 0;
+  color: #fff;
 }
 
-h1 {
-  font-family: "Pacifico", cursive;
-  text-align: center;
+.nav-tabs ul {
+  margin: 0;
+}
+.nav-tabs .nav-link {
+  color: orange;
+}
+.nav-tabs .nav-link.active {
+  color: red;
+}
+.nav-tabs .nav-link:disabled {
+  color: blue;
+}
+
+.flex {
+  display: flex;
+}
+.flex__s-b {
+  display: flex;
+  justify-content: space-between;
+}
+
+.row > div {
+  background: pink;
+  border: 1px solid #000;
 }/*# sourceMappingURL=index.css.map */
