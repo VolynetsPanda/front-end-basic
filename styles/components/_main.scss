@@ -6,38 +6,72 @@
     text-decoration: none;
 }
 
-body{
-    background: $base-color;
-}
 .wrap{
-    width: 50%;
-    background: red;
-    &-box{
-        width: $default-size;
-        height: $default-size;
-        background: $black-color;
-        &-inner{
-            background: orange;
-        }
-        &:hover{
-            background: green;
-            .wrap-box-inner{
-                background: yellow;
-            }
-        }
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 200px 1fr 100px;
+    grid-template-rows: 100px 1fr 100px;
+    grid-template-areas: 
+    "header header header"
+    "menu main aside"
+    // "menu . aside"
+    "footer footer footer"
+    ;
+    grid-gap: 10px;
+    // grid-template-columns: 100px 100px 100px 100px;
+    // grid-template-columns: repeat(2, 1fr 100px);
+    // grid-template-columns: minmax(500px, 600px) 1fr;
+    // grid-template-rows: 1fr 1fr 1fr;
+    // grid-template: 1fr 1fr 1fr / 100px 100px 100px 100px;
+    // grid-template: repeat(3, minmax(100px, 1fr)) / repeat(4, 100px);
+    // grid-gap: 10px;
+//     .item{
+//         // width: 100px;
+//         // height: 100px;
+//         background: pink;
+//         display: flex;
+//         justify-content: center;
+//         // margin: 10px;
+//         &:nth-child(1){
+//             grid-column-start: 2;
+//             grid-column-end: -1;
+//         }
+//         &:nth-child(2){
+//             // grid-column-start: 2;
+//             // grid-column-end: 4;
+//             grid-column: 2 / 5;
+//             grid-row: 3;
+//         }
+//         &:nth-child(4){
+//             grid-column: 2 / 5;
+//             grid-row: 3;
+//         }
+//     }
+    &>*{
+        // display: flex;
+        // align-content: center;
+        text-align: center;
     }
-    @media screen and (max-width: $lx-screen){
-        background-color: green;
+    header{
+        grid-area: header;
+        background: red;
     }
-    @media screen and (max-width: $ls-screen){
-        width: 100%;
-        background-color: orange;
+    nav{
+        grid-area: menu;
+        background: yellow;
+        width: 400px;
+    }
+    main{
+        grid-area: main;
+        background: pink;
+    }
+    footer{
+        grid-area: footer;
+        background: green;
+    }
+    aside{
+        grid-area: aside;
+        background: orange;
     }
 }
-p{
-    @include button-base(24px, right);
-}
-h1{
-    font-family: $fonts;
-    text-align: center;
-}
+
