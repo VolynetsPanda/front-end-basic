@@ -5,3 +5,28 @@
     list-style: none;
     text-decoration: none;
 }
+.img{
+    width: 100%;
+    height: 200px;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/0/0f/Grosser_Panda.JPG') no-repeat;
+    background-size: cover;
+}
+.img-2, .img-2 img, .img-2 source{
+    width: 100%;
+}
+.img-2 img{
+    width: 100%;
+}
+@media screen and (max-width: 900px) {
+    .img{
+        background-image: url('https://republic.ru/images/uploads/780/af70753e86a2972bc9ab2fcfcd4faca1.jpeg');
+    }
+}
+@media screen and (max-width: 600px) {
+    .img{
+        background-image: url('https://st.depositphotos.com/1010683/1389/i/600/depositphotos_13895290-stock-photo-giant-panda-bear-eating-bamboo.jpg');
+    }
+}
+.date-20220829{
+    color: red;
+}
